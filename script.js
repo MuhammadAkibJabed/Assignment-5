@@ -1,3 +1,55 @@
+function getExtraMemoryCost() {
+    let extraMemoryCost = document.getElementById('extraMemoryCost');
+    let extraMemoryCostText = extraMemoryCost.innerText;
+    let extraMemoryCostNumber = parseInt(extraMemoryCostText);
+    return extraMemoryCostNumber;
+}
+function getExtraStorageCost() {
+    let extraStorageCost = document.getElementById('extraStorageCost');
+    let extraStorageCostText = extraStorageCost.innerText;
+    let extraStorageCostNumber = parseInt(extraStorageCostText);
+
+    return extraStorageCostNumber;
+}
+function getExtraDeliveryCost() {
+    let extraDeliveryCost = document.getElementById('extraDeliveryCost');
+    let extraDeliveryCostText = extraDeliveryCost.innerText;
+    let extraDeliveryCostNumber = parseInt(extraDeliveryCostText);
+    return extraDeliveryCostNumber;
+}
+function getBasePriceValue() {
+    let basePrice = document.getElementById('basePrice');
+    let basePriceText = basePrice.innerText;
+    let basePriceNumber = parseInt(basePriceText);
+    return basePriceNumber;
+}
+function getTotalPrice() {
+    let extraMemoryCost = getExtraMemoryCost();
+    let extraStorageCost = getExtraStorageCost();
+    let extraDeliveryCost = getExtraDeliveryCost();
+    let basePrice = getBasePriceValue();
+
+
+
+    let totalPrice = document.getElementById('totalPrice');
+    let totalPriceText = totalPrice.innerText;
+    let totalPriceNumber = parseInt(totalPriceText);
+    let totalCost = totalPrice.innerText = extraMemoryCost + extraStorageCost + extraDeliveryCost + basePrice;
+    return totalCost;
+}
+function getFinalPrice() {
+    let extraMemoryCost = getExtraMemoryCost();
+    let extraStorageCost = getExtraStorageCost();
+    let extraDeliveryCost = getExtraDeliveryCost();
+    let basePrice = getBasePriceValue();
+
+    let finalPrice = document.getElementById('finalPrice');
+    let finalPriceText = finalPrice.innerText;
+    let finalPriceNumber = parseInt(finalPriceText);
+    let finalCost = finalPrice.innerText = extraMemoryCost + extraStorageCost + extraDeliveryCost + basePrice;
+    return finalCost;
+}
+
 
 
 
@@ -17,78 +69,51 @@ function updateBalance(extraProductCost, price, isConfig) {
 
 
 
+    getTotalPrice();
+    getFinalPrice()
+
+    // // get extra storage cost value
 
 
-    // get extra storage cost value
-
-    let extraStorageCost = document.getElementById('extraStorageCost');
-    let extraStorageCostText = extraStorageCost.innerText;
-    let extraStorageCostNumber = parseInt(extraStorageCostText);
+    // let extraStorageCost = getExtraStorageCost();
 
 
-    // get best price value
-    let basePrice = document.getElementById('basePrice');
-    let basePriceText = basePrice.innerText;
-    let basePriceNumber = parseInt(basePriceText);
+    // // get best price value
 
-
-
-
-    // get total price value
-    let totalPrice = document.getElementById('totalPrice');
-    let totalPriceText = totalPrice.innerText;
-    let totalPriceNumber = parseInt(totalPriceText);
-    let totalCost = totalPrice.innerText = basePriceNumber + extraProductCostNumber + extraStorageCostNumber;
+    // let basePrice = getBasePriceValue();
 
 
 
-    // get final price value
-    let finalPrice = document.getElementById('finalPrice');
-    let finalPriceText = finalPrice.innerText;
-    let finalPriceNumber = parseInt(finalPriceText);
+    // // get total price value
+    // let totalCost = getTotalPrice();
 
-    finalPrice.innerText = totalCost;
-    finalPriceNumber = totalCost;
+
+
+    // // get final price value
+
+    // let x = getFinalPrice();
+    // console.log(x);
 
 
 
 
 
-
-    console.log(extraProductCostNumber);
-
+    // // console.log(extraProductCostNumber);
+    // return extraProductCostNumber;
 }
 
 
-function calculateTotal() {
-    let basePrice = document.getElementById('basePrice');
-    let basePriceText = basePrice.innerText;
-    let basePriceNumber = parseInt(basePriceText);
-    let extraProductCost = extraCost;
 
-    // let extraMemoryCost = document.getElementById('extraMemoryCost');
-    // let extraMemoryCostText = extraMemoryCost.innerText;
-    // let extraMemoryCostNumber = parseInt(extraMemoryCostText);
+// function getExtraStorageCost() {
+//     let extraStorageCost = document.getElementById('extraStorageCost');
+//     let extraStorageCostText = extraStorageCost.innerText;
+//     let extraStorageCostNumber = parseInt(extraStorageCostText);
 
-    // let extraStorageCost = document.getElementById('extraStorageCost');
-    // let extraStorageCostText = extraStorageCost.innerText;
-    // let extraStorageCostNumber = parseInt(extraStorageCostText);
-
-    // let extraDeliveryCost = document.getElementById('extraDeliveryCost');
-    // let extraDeliveryCostText = extraDeliveryCost.innerText;
-    // let extraDeliveryCostNumber = parseInt(extraDeliveryCostText);
-
-    let totalPrice = document.getElementById('totalPrice');
-    let totalPriceText = totalPrice.innerText;
-
-
-    let totalPriceNumber = totalPrice.innerText = baseprice + extraProductCost;
+//     return extraStorageCostNumber;
+// }
 
 
 
-
-
-}
 function lowStorageCalculation() {
     let extraStorageCost = document.getElementById('extraStorageCost');
     let extraStorageCostText = extraStorageCost.innerText;
@@ -101,56 +126,52 @@ function lowStorageCalculation() {
 
 
 
+    getTotalPrice();
+    getFinalPrice()
+
+
+    // // hire  base price for calculating total price against 256gb storage click
+    // let basePrice = document.getElementById('basePrice');
+    // let basePriceText = basePrice.innerText;
+    // let basePriceNumber = parseInt(basePriceText);
 
 
 
-    // hire  base price for calculating total price against 256gb storage click
-    let basePrice = document.getElementById('basePrice');
-    let basePriceText = basePrice.innerText;
-    let basePriceNumber = parseInt(basePriceText);
+    // // hire  extra Memory cost for calculating total price against 256gb storage click
+    // let extraMemoryCost = document.getElementById('extraMemoryCost');
+    // let extraMemoryCostText = extraMemoryCost.innerText;
+    // let extraMemoryCostNumber = parseInt(extraMemoryCostText);
 
 
-
-    // hire  extra Memory cost for calculating total price against 256gb storage click
-    let extraMemoryCost = document.getElementById('extraMemoryCost');
-    let extraMemoryCostText = extraMemoryCost.innerText;
-    let extraMemoryCostNumber = parseInt(extraMemoryCostText);
-
-
-    // hire  extra Delivery cost for calculating total price against 256gb storage click
-
-    let extraDeliveryCost = document.getElementById('extraDeliveryCost');
-    let extraDeliveryCostText = extraDeliveryCost.innerText;
-    let extraDeliveryCostNumber = parseInt(extraDeliveryCostText);
-
-
-
-
-    // hire  total price for calculating total price against 256gb storage click
-    let totalPrice = document.getElementById('totalPrice');
-    let totalPriceText = totalPrice.innerText;
-    let totalPriceNumber = parseInt(totalPriceText);
-    let totalCost = totalPrice.innerText = basePriceNumber + extraMemoryCostNumber + extraDeliveryCostNumber + extraStorageCostNumber;
-
-    // hire  final price for calculating total price against 256gb storage click
-    let finalPrice = document.getElementById('finalPrice');
-    let finalPriceText = finalPrice.innerText;
-    let finalPriceNumber = parseInt(finalPriceText);
-
-    finalPrice.innerText = totalCost;
-    finalPriceNumber = totalCost;
+    // // hire  extra Delivery cost for calculating total price against 256gb storage click
 
 
 
 
-    console.log(extraMemoryCostNumber);
-    console.log(basePriceNumber);
-    console.log(extraDeliveryCostNumber);
-    console.log(totalCost);
-    console.log(finalPriceNumber);
+
+
+    // // hire  total price for calculating total price against 256gb storage click
+    // let totalPrice = document.getElementById('totalPrice');
+    // let totalPriceText = totalPrice.innerText;
+    // let totalPriceNumber = parseInt(totalPriceText);
+    // let totalCost = totalPrice.innerText = basePriceNumber + extraMemoryCostNumber + extraDeliveryCostNumber + extraStorageCostNumber;
+
+    // // hire  final price for calculating total price against 256gb storage click
+    // let finalPrice = document.getElementById('finalPrice');
+    // let finalPriceText = finalPrice.innerText;
+    // let finalPriceNumber = parseInt(finalPriceText);
+
+    // finalPrice.innerText = totalCost;
+    // finalPriceNumber = totalCost;
 
 
 
+
+    // // console.log(extraMemoryCostNumber);
+    // // console.log(basePriceNumber);
+    // // console.log(extraDeliveryCostNumber);
+    // // console.log(totalCost);
+    // // console.log(finalPriceNumber);
 
 
 
@@ -161,7 +182,10 @@ function lowStorageCalculation() {
 
 
 
-    console.log(extraStorageCostNumber)
+
+
+
+    // // console.log(extraStorageCostNumber)
 }
 function middleStorageCalculation() {
     let extraStorageCost = document.getElementById('extraStorageCost');
@@ -177,50 +201,54 @@ function middleStorageCalculation() {
     extraStorageCost.innerText = extraStorageCostNumber;
 
 
-    // hire  base price for calculating total price against 512 storage click
-    let basePrice = document.getElementById('basePrice');
-    let basePriceText = basePrice.innerText;
-    let basePriceNumber = parseInt(basePriceText);
+    // // hire  base price for calculating total price against 512 storage click
+    // let basePrice = document.getElementById('basePrice');
+    // let basePriceText = basePrice.innerText;
+    // let basePriceNumber = parseInt(basePriceText);
 
 
 
-    // hire  extra Memory cost for calculating total price against 512 storage click
-    let extraMemoryCost = document.getElementById('extraMemoryCost');
-    let extraMemoryCostText = extraMemoryCost.innerText;
-    let extraMemoryCostNumber = parseInt(extraMemoryCostText);
+    // // hire  extra Memory cost for calculating total price against 512 storage click
+    // let extraMemoryCost = document.getElementById('extraMemoryCost');
+    // let extraMemoryCostText = extraMemoryCost.innerText;
+    // let extraMemoryCostNumber = parseInt(extraMemoryCostText);
 
 
-    // hire  extra Delivery cost for calculating total price against 512 storage click
+    // // hire  extra Delivery cost for calculating total price against 512 storage click
 
-    let extraDeliveryCost = document.getElementById('extraDeliveryCost');
-    let extraDeliveryCostText = extraDeliveryCost.innerText;
-    let extraDeliveryCostNumber = parseInt(extraDeliveryCostText);
-
-
-
-
-    // hire  total price for calculating total price against 512 storage click
-    let totalPrice = document.getElementById('totalPrice');
-    let totalPriceText = totalPrice.innerText;
-    let totalPriceNumber = parseInt(totalPriceText);
-    let totalCost = totalPrice.innerText = basePriceNumber + extraMemoryCostNumber + extraDeliveryCostNumber + extraStorageCostNumber;
-
-    // hire  final price for calculating total price against 512 storage click
-    let finalPrice = document.getElementById('finalPrice');
-    let finalPriceText = finalPrice.innerText;
-    let finalPriceNumber = parseInt(finalPriceText);
-
-    finalPrice.innerText = totalCost;
-    finalPriceNumber = totalCost;
+    // let extraDeliveryCost = document.getElementById('extraDeliveryCost');
+    // let extraDeliveryCostText = extraDeliveryCost.innerText;
+    // let extraDeliveryCostNumber = parseInt(extraDeliveryCostText);
 
 
 
 
-    console.log(extraMemoryCostNumber);
-    console.log(basePriceNumber);
-    console.log(extraDeliveryCostNumber);
-    console.log(totalCost);
-    console.log(finalPriceNumber);
+    // // hire  total price for calculating total price against 512 storage click
+    // let totalPrice = document.getElementById('totalPrice');
+    // let totalPriceText = totalPrice.innerText;
+    // let totalPriceNumber = parseInt(totalPriceText);
+    // let totalCost = totalPrice.innerText = basePriceNumber + extraMemoryCostNumber + extraDeliveryCostNumber + extraStorageCostNumber;
+
+    // // hire  final price for calculating total price against 512 storage click
+    // let finalPrice = document.getElementById('finalPrice');
+    // let finalPriceText = finalPrice.innerText;
+    // let finalPriceNumber = parseInt(finalPriceText);
+
+    // finalPrice.innerText = totalCost;
+    // finalPriceNumber = totalCost;
+
+
+
+
+    // // console.log(extraMemoryCostNumber);
+    // // console.log(basePriceNumber);
+    // // console.log(extraDeliveryCostNumber);
+    // // console.log(totalCost);
+    // // console.log(finalPriceNumber);
+
+    getTotalPrice();
+    getFinalPrice();
+
 }
 
 
@@ -248,54 +276,50 @@ function highStorageCalculation() {
 
 
 
-    // hire  base price for calculating total price against 256gb storage click
-    let basePrice = document.getElementById('basePrice');
-    let basePriceText = basePrice.innerText;
-    let basePriceNumber = parseInt(basePriceText);
+    // // hire  base price for calculating total price against 256gb storage click
+    // let basePrice = document.getElementById('basePrice');
+    // let basePriceText = basePrice.innerText;
+    // let basePriceNumber = parseInt(basePriceText);
 
 
 
-    // hire  extra Memory cost for calculating total price against 1tb storage click
-    let extraMemoryCost = document.getElementById('extraMemoryCost');
-    let extraMemoryCostText = extraMemoryCost.innerText;
-    let extraMemoryCostNumber = parseInt(extraMemoryCostText);
+    // // hire  extra Memory cost for calculating total price against 1tb storage click
+    // let extraMemoryCost = document.getElementById('extraMemoryCost');
+    // let extraMemoryCostText = extraMemoryCost.innerText;
+    // let extraMemoryCostNumber = parseInt(extraMemoryCostText);
 
 
-    // hire  extra Delivery cost for calculating total price against 1tb storage click
+    // // hire  extra Delivery cost for calculating total price against 1tb storage click
 
-    let extraDeliveryCost = document.getElementById('extraDeliveryCost');
-    let extraDeliveryCostText = extraDeliveryCost.innerText;
-    let extraDeliveryCostNumber = parseInt(extraDeliveryCostText);
-
-
-
-
-    // hire  total price for calculating total price against 1tb storage click
-    let totalPrice = document.getElementById('totalPrice');
-    let totalPriceText = totalPrice.innerText;
-    let totalPriceNumber = parseInt(totalPriceText);
-    let totalCost = totalPrice.innerText = basePriceNumber + extraMemoryCostNumber + extraDeliveryCostNumber + extraStorageCostNumber;
-
-    // hire  final price for calculating total price against 1tb storage click
-    let finalPrice = document.getElementById('finalPrice');
-    let finalPriceText = finalPrice.innerText;
-    let finalPriceNumber = parseInt(finalPriceText);
-
-    finalPrice.innerText = totalCost;
-    finalPriceNumber = totalCost;
+    // let extraDeliveryCost = document.getElementById('extraDeliveryCost');
+    // let extraDeliveryCostText = extraDeliveryCost.innerText;
+    // let extraDeliveryCostNumber = parseInt(extraDeliveryCostText);
 
 
 
 
-    console.log(extraMemoryCostNumber);
-    console.log(basePriceNumber);
-    console.log(extraDeliveryCostNumber);
-    console.log(totalCost);
-    console.log(finalPriceNumber);
+    // // hire  total price for calculating total price against 1tb storage click
+    // let totalPrice = document.getElementById('totalPrice');
+    // let totalPriceText = totalPrice.innerText;
+    // let totalPriceNumber = parseInt(totalPriceText);
+    // let totalCost = totalPrice.innerText = basePriceNumber + extraMemoryCostNumber + extraDeliveryCostNumber + extraStorageCostNumber;
+
+    // // hire  final price for calculating total price against 1tb storage click
+    // let finalPrice = document.getElementById('finalPrice');
+    // let finalPriceText = finalPrice.innerText;
+    // let finalPriceNumber = parseInt(finalPriceText);
+
+    // finalPrice.innerText = totalCost;
+    // finalPriceNumber = totalCost;
 
 
 
 
+    // // console.log(extraMemoryCostNumber);
+    // // console.log(basePriceNumber);
+    // // console.log(extraDeliveryCostNumber);
+    // // console.log(totalCost);
+    // // console.log(finalPriceNumber);
 
 
 
@@ -307,65 +331,33 @@ function highStorageCalculation() {
 
 
 
-    console.log(extraStorageCostNumber)
+
+
+
+
+    // // console.log(extraStorageCostNumber)
+
+
+
+    getTotalPrice();
+    getFinalPrice();
+
 }
 
 
 
 
 document.getElementById('8Gb-memory-product').addEventListener('click', function () {
-    // let extraProuctCost = document.getElementById('extraMemoryCost');
-    // let extraProductCostText = extraProuctCost.innerText;
-    // let extraProductCostNumber = parseInt(extraProductCostText);
-    // let basePrice = document.getElementById('basePrice');
-    // let basePriceText = basePrice.innerText;
-    // let basePriceNumber = parseInt(basePriceText);
-    // let totalPrice = document.getElementById('totalPrice');
-    // let totalPriceText = totalPrice.innerText;
-    // let totalPriceNumber = parseInt(totalPriceText);
-
-    // let finalPrice = document.getElementById('finalPrice');
-    // let finalPriceText = finalPrice.innerText;
-    // let finalPriceNumber = parseInt(finalPriceText);
-    // if (extraProuctCost.innerText > 0) {
-    //     extraProuctCost.innerText = extraProductCostNumber - 180;
-    //     basePrice.innerText = basePriceNumber - 180;
-    //     totalPrice.innerText = totalPriceNumber - 180;
-    //     finalPrice.innerText = finalPriceNumber - 180;
-    // }
-
-
 
     updateBalance('extraMemoryCost', 180, false);
 
+
+
+
 })
 document.getElementById('16Gb-memory-product').addEventListener('click', function () {
-    // let extraProuctCost = document.getElementById('extraMemoryCost');
-    // let extraProductCostText = extraProuctCost.innerText;
-    // let extraProductCostNumber = parseInt(extraProductCostText);
-
-    // let basePrice = document.getElementById('basePrice');
-    // let basePriceText = basePrice.innerText;
-    // let basePriceNumber = parseInt(basePriceText);
-
-    // let totalPrice = document.getElementById('totalPrice');
-    // let totalPriceText = totalPrice.innerText;
-    // let totalPriceNumber = parseInt(totalPriceText);
-
-
-    // let finalPrice = document.getElementById('finalPrice');
-    // let finalPriceText = finalPrice.innerText;
-    // let finalPriceNumber = parseInt(finalPriceText);
-    // if (extraProuctCost.innerText == 0) {
-    //     extraProuctCost.innerText = extraProductCostNumber + 180;
-    //     basePrice.innerText = basePriceNumber + 180;
-    //     totalPrice.innerText = totalPriceNumber + 180;
-    //     finalPrice.innerText = finalPriceNumber + 180;
-    // }
-
 
     updateBalance('extraMemoryCost', 180, true);
-
 
 
 })
@@ -374,22 +366,26 @@ document.getElementById('256Gb-storage-product').addEventListener('click', funct
     lowStorageCalculation();
 
 })
-// document.getElementById('256Gb-storage-product').addEventListener('click', function () {
-//     updateBalance('extraStorageCost', 180, true, true, true);
 
-// })
 document.getElementById('512Gb-storage-product').addEventListener('click', function () {
     middleStorageCalculation();
+
+
 })
 document.getElementById('1TB-storage-product').addEventListener('click', function () {
     highStorageCalculation();
+
+
 })
 
 document.getElementById('late-delivery-product').addEventListener('click', function () {
     updateBalance('extraDeliveryCost', 20, false);
+    getTotalPrice();
+
 
 })
 document.getElementById('fast-delivery-product').addEventListener('click', function () {
     updateBalance('extraDeliveryCost', 20, true);
+    getTotalPrice();
 
 })
