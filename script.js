@@ -108,6 +108,8 @@ function lowStorageCalculation() {
 
 }
 
+
+
 // Calculate extra storage cost for 512gb storage
 function middleStorageCalculation() {
     let extraStorageCost = document.getElementById('extraStorageCost');
@@ -190,4 +192,25 @@ document.getElementById('late-delivery-product').addEventListener('click', funct
 // first delivery event handeler button
 document.getElementById('fast-delivery-product').addEventListener('click', function () {
     updateBalance('extraDeliveryCost', 20, true);
+})
+
+
+
+
+// discountButton work 
+document.getElementById('discountButton').addEventListener('click', function () {
+    let finalPrice = document.getElementById('finalPrice');
+    let finalPriceText = finalPrice.innerText;
+    let finalPriceNumber = parseInt(finalPriceText);
+    let promoCodeInput = document.getElementById('discountFill');
+    let promoCode = promoCodeInput.value;
+
+
+    if (promoCodeInput.value == 'stevekaku') {
+        finalCost = finalPriceNumber - finalPriceNumber * 0.2;
+    }
+    finalPrice.innerText = finalCost;
+
+
+    promoCodeInput.value = '';
 })
