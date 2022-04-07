@@ -197,7 +197,7 @@ document.getElementById('fast-delivery-product').addEventListener('click', funct
 
 
 
-// discountButton work 
+// discountButton work  done
 document.getElementById('discountButton').addEventListener('click', function () {
     let finalPrice = document.getElementById('finalPrice');
     let finalPriceText = finalPrice.innerText;
