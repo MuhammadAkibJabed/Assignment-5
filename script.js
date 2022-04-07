@@ -66,9 +66,6 @@ function updateBalance(extraProductCost, price, isConfig) {
     else if (extraProductCostNumber > 0 && isConfig == false) {
         extraProductCostNumber = extraProuctCost.innerText = extraProductCostNumber - price;
     }
-
-
-
     getTotalPrice();
     getFinalPrice()
 
